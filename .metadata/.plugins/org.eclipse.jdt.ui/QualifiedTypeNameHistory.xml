@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="com.axelor.apps.demo.db.Contact"/>
+    <fullyQualifiedTypeName name="com.axelor.apps.demo.db.repo.ContactRepository"/>
+    <fullyQualifiedTypeName name="com.axelor.apps.contact.ContactRepo"/>
+    <fullyQualifiedTypeName name="com.axelor.app.AxelorModule"/>
+    <fullyQualifiedTypeName name="com.axelor.apps.contact.StudentContactRepo"/>
+    <fullyQualifiedTypeName name="com.axelor.meta.schema.actions.ActionImport.Import"/>
+    <fullyQualifiedTypeName name="com.csv.data.CSVDataImport"/>
+    <fullyQualifiedTypeName name="com.axelor.apps.contact.db.repo.TitleRepository"/>
+    <fullyQualifiedTypeName name="com.google.inject.AbstractModule"/>
+    <fullyQualifiedTypeName name="javax.cache.CacheManager"/>
+    <fullyQualifiedTypeName name="net.sf.ehcache.CacheManager"/>
+    <fullyQualifiedTypeName name="com.axelor.db.JpaModule"/>
+    <fullyQualifiedTypeName name="com.axelor.auth.AuthModule"/>
+    <fullyQualifiedTypeName name="com.axelor.app.AppModule"/>
+    <fullyQualifiedTypeName name="com.axelor.test.GuiceModules"/>
+    <fullyQualifiedTypeName name="org.junit.runner.RunWith"/>
+    <fullyQualifiedTypeName name="com.axelor.test.GuiceRunner"/>
+    <fullyQualifiedTypeName name="com.csv.data.DataModule"/>
+    <fullyQualifiedTypeName name="com.axelor.inject.Beans"/>
+    <fullyQualifiedTypeName name="com.axelor.apps.contact.db.repo.StudentRepository"/>
+    <fullyQualifiedTypeName name="net.minidev.json.writer.BeansMapper.Bean"/>
+    <fullyQualifiedTypeName name="com.axelor.apps.contact.db.repo.CircleRepository"/>
+    <fullyQualifiedTypeName name="com.axelor.apps.contact.db.repo.DepartmentsRepository"/>
+    <fullyQualifiedTypeName name="org.apache.commons.codec.language.bm.Rule.PhonemeList"/>
+    <fullyQualifiedTypeName name="com.axelor.apps.contact.db.repo.PhoneRepository"/>
+    <fullyQualifiedTypeName name="com.axelor.apps.contact.db.repo.DemoO2MRepository"/>
+    <fullyQualifiedTypeName name="com.axelor.apps.contact.db.repo.DemoO2ORepository"/>
+    <fullyQualifiedTypeName name="com.axelor.apps.contact.db.repo.DemoM2MRepository"/>
+    <fullyQualifiedTypeName name="org.quartz.xml.ValidationException"/>
+    <fullyQualifiedTypeName name="com.google.inject.Inject"/>
+    <fullyQualifiedTypeName name="com.axxelor.apps.conatct.controller.StudentController"/>
+    <fullyQualifiedTypeName name="com.axelor.apps.contact.db.DemoO2O"/>
+    <fullyQualifiedTypeName name="org.junit.Test"/>
+    <fullyQualifiedTypeName name="java.io.IOException"/>
+    <fullyQualifiedTypeName name="com.axelor.data.Importer"/>
+    <fullyQualifiedTypeName name="com.axelor.data.csv.CSVImporter"/>
+    <fullyQualifiedTypeName name="com.axelor.data.ImportTask"/>
+    <fullyQualifiedTypeName name="java.io.File"/>
+    <fullyQualifiedTypeName name="com.axelor.apps.contact.module.ContactModule"/>
+    <fullyQualifiedTypeName name="com.lowagie.toolbox.plugins.Concat"/>
+    <fullyQualifiedTypeName name="java.time.LocalDate"/>
+    <fullyQualifiedTypeName name="java.util.Map"/>
+    <fullyQualifiedTypeName name="com.axelor.apps.contact.db.Student"/>
+    <fullyQualifiedTypeName name="java.lang.Object"/>
+</qualifiedTypeNameHistroy>

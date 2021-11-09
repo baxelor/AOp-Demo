@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/object-views
+  http://axelor.com/xml/ns/object-views/object-views_5.4.xsd">
+  
+  <grid  title="State" name="contact-configure-state" model="com.axelor.apps.contact.db.State">
+  		<field name="name"/>
+  		<field name="country"/>
+  </grid>
+  
+  <form  title="State" name="contact-configure-state-form" model="com.axelor.apps.contact.db.State" css="panel-cyan">
+  	<panel title="State">
+  		<field name="name"/>
+  		<field name="country" widget="SuggestBox"/>
+  	</panel>
+  </form>
+  </object-views>

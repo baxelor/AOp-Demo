@@ -1,0 +1,13 @@
+<domain-models xmlns="http://axelor.com/xml/ns/domain-models"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/domain-models
+  http://axelor.com/xml/ns/domain-models/domain-models_5.4.xsd">
+
+  <module name="contest" package="com.axelor.apps.contest.db"/>
+
+  <entity name="Contest">
+  		<string name="contName" namecolumn="true"/>	
+  			<many-to-many  name="departments" ref="com.axelor.apps.contest.db.Department" title="Allow Department"/>
+  				<many-to-many  name="semesters" ref="com.axelor.apps.contest.db.AcaSemester" title="Allow Semester"/>
+  </entity>
+</domain-models>

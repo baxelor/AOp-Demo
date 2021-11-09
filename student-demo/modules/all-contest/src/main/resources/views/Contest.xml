@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<object-views xmlns="http://axelor.com/xml/ns/object-views" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://axelor.com/xml/ns/object-views
+  http://axelor.com/xml/ns/object-views/object-views_5.4.xsd">
+
+
+	<grid title="Contests" name="contest-configure-grid" model="com.axelor.apps.contest.db.Contest">
+		<field name="contName" title="All Contest" />
+		<field name="departments" title="Department" />
+	</grid>
+
+	<form title="Contest Form" name="contest-configure-form" model="com.axelor.apps.contest.db.Contest" css="panel-cyan">
+		<toolbar>
+			<button onClick="action-contest-report-print" name="print-btn" title="Print" />
+		</toolbar>
+		<panel title="Add Contest">
+			<field name="contName" title="Create New Contest" />
+			<field name="departments" widget="tagSelect" />
+			<field name="semesters" widget="tagSelect" />
+
+		</panel>
+	</form>
+
+	<action-report output="test" name="action-contest-report-print" design="contest_report.rptdesign">
+		<param name="contestId" expr="eval:id"/>
+	</action-report>
+</object-views>

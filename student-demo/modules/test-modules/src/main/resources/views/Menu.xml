@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/object-views
+  http://axelor.com/xml/ns/object-views/object-views_5.4.xsd">
+  
+  
+  	<menuitem title="Test Menu" name="demo-test-menu" icon="fa-bug" icon-background="#9C610D"/>
+  	
+  	<menuitem title="Contact" name="demo-test-contact" parent="demo-test-menu" action="action-contact-menu" icon="fa-address-book" icon-background="#D5703A"/>
+  		<action-view name="action-contact-menu" title="Contacts" model="com.axelor.apps.demo.db.Contact">
+  			<view type="cards" name="demo-contact-card"/>
+  			<view type="form" name="demo-contact-form"/>
+  		</action-view>
+  
+  </object-views>

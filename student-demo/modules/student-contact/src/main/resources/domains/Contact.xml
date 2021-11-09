@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<domain-models xmlns="http://axelor.com/xml/ns/domain-models"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/domain-models
+  http://axelor.com/xml/ns/domain-models/domain-models_5.4.xsd">
+
+  <!-- entity definitions here -->
+  <module  name="contact" package="com.axelor.apps.contact.db"/>
+  	<entity name="Student">
+  		<string name="firstName"/>
+  		<string name="lastName"/>
+  		<date name="dateOfBirth"/>
+  		<date name="testDate"/>
+  		<binary name="image" title="Photo" help="Max Size 4MB" image="true"/>
+  		
+  		<string name="fullName" namecolumn="true" search="firstName,lastName">
+  		<![CDATA[
+		    if (firstName == null && lastName == null)
+		      return null;
+		    if (title == null)
+		        return firstName + " " + lastName;
+		    return title.getName() + " " + firstName + " " + lastName;
+    	]]></string>
+    	
+    	<string name="email"><![CDATA[
+		    if (emails == null || emails.isEmpty()) return null;
+		    for (Email email : emails) if (email.getPrimary() == Boolean.TRUE) return email.getEmailAddress();
+		    return emails.get(0).getEmailAddress();
+		    ]]></string>
+    	
+    	<string name="phone"><![CDATA[
+		    if (phones == null || phones.isEmpty()) return null;
+		    for (Phone phone : phones) if (phone.getPrimary() == Boolean.TRUE) return phone.getPhone();
+		    return phones.get(0).getPhone();
+		    ]]></string>
+    	
+    	<many-to-one  name="title" ref="com.axelor.apps.contact.db.Title"/>
+    		<one-to-many ref="com.axelor.apps.contact.db.Phone" name="phones" mappedBy="student"/>
+    			<one-to-many ref="com.axelor.apps.contact.db.Email" name="emails" mappedBy="student"/>
+    				<one-to-many ref="com.axelor.apps.contact.db.Address" name="address" mappedBy="student"/>
+    					<many-to-one  name="departments" ref="com.axelor.apps.contact.db.Departments"/>
+    						<many-to-one  name="circles" ref="com.axelor.apps.contact.db.Circle"/>
+    							
+    							<one-to-many ref="com.axelor.apps.contact.db.DemoO2M" name="demoO2M" mappedBy="student"/>
+    						<one-to-one ref="com.axelor.apps.contact.db.DemoO2O" name="demoO2O"/>
+    					<many-to-many ref="com.axelor.apps.contact.db.DemoM2M" name="demoM2M"/>
+  	</entity>
+</domain-models>

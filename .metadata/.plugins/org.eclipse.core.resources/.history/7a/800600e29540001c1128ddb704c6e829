@@ -1,0 +1,17 @@
+package com.axelor.apps.data.test;
+
+import java.time.LocalDate;
+import java.util.Map;
+
+import com.axelor.apps.contact.db.Student;
+import com.axelor.apps.contact.module.ContactModule;
+
+public class testMethod {
+	
+	public void getdate(Map<String, Object> context) {
+		Student student = new Student();
+		student.setTestDate(LocalDate.now());
+		context.put("testDate", student);
+	}
+
+}

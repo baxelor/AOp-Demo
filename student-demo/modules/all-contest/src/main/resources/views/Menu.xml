@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<object-views xmlns="http://axelor.com/xml/ns/object-views" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://axelor.com/xml/ns/object-views
+  http://axelor.com/xml/ns/object-views/object-views_5.4.xsd">
+  	
+  	<menuitem title="Contest" name="menu-contest"/>
+  	
+  	<menuitem title="All Participents"  name="menu-contest-perticipents-all" parent="menu-contest" action="menu.contest.perticipent.all" icon="fa fa-asterisk"/>
+  			<action-view name="menu.contest.perticipent.all" title="Perticipents" model="com.axelor.apps.contest.db.Participents">
+  				<view type="grid" name="contest-perticipent-grid"/> 
+  				<view type="form" name="contest-participate-form"/>				
+  			</action-view>
+  			
+  	<menuitem title="Perticipate" name="menu-contest-perticipate" parent="menu-contest"/>
+  		<menuitem title="Quize" name="menu-contest-perticipate-quize" parent="menu-contest-perticipate"/>
+  		<menuitem title="Coding" name="menu-contest-perticipate-coding" parent="menu-contest-perticipate"/>
+  		<menuitem title="Robotics" name="menu-contest-perticipate-robotics" parent="menu-contest-perticipate"/>
+  		
+ 
+  	<menuitem title="Configure Contest" name="menu-contest-configure" parent="menu-contest"/> 	
+  		<menuitem title="Add Contest" name="menu-configure-add-contest" parent="menu-contest-configure" action="menu-contest.configure.addContest"/>
+	  		<action-view name="menu-contest.configure.addContest" title="ContestConfiguration" model="com.axelor.apps.contest.db.Contest">
+	  			<view type="grid" name="contest-configure-grid"/>
+	  			<view type="form" name="contest-configure-form"/>	
+	  		</action-view> 	
+	  		
+	  	<menuitem title="Academics" name="menu-configure-acadamics" parent="menu-contest-configure"/>
+	  		<menuitem title="Add Department" name="menu-configure-add-department" parent="menu-configure-acadamics" action="menu-contest.configure.addDepartment"/>
+	  		<action-view name="menu-contest.configure.addDepartment" title="Departments" model="com.axelor.apps.contest.db.Department">
+	  			<view type="grid" name="contest-department-grid"/>
+	  			<view type="form" name="contest-department-form"/>	
+	  		</action-view> 	
+	  	
+	  	<menuitem title="Add Semester" name="menu-configure-add-semester" parent="menu-configure-acadamics" action="menu-contest.configure.addSemester"/>	
+	  		<action-view name="menu-contest.configure.addSemester" title="Semesters" model="com.axelor.apps.contest.db.AcaSemester">
+	  			<view type="grid" name="contest-add-sem-grid"/>
+	  			<view type="form" name="contest-add-sem-form"/>	
+	  		</action-view>
+  
+  </object-views>

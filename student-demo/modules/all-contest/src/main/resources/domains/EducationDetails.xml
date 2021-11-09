@@ -1,0 +1,14 @@
+<domain-models xmlns="http://axelor.com/xml/ns/domain-models"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/domain-models
+  http://axelor.com/xml/ns/domain-models/domain-models_5.4.xsd">
+
+  <module name="contest" package="com.axelor.apps.contest.db"/>
+
+  <entity name="EducationDetails">
+  		<string name="semester" title="Current Semester"/>
+  		<string name="institute" title="Name Of Institute"/>
+  		<string name="marks" title="GPA Or Percentage" />
+  		<string name="degree" title="Name Of Degree"/>
+  </entity>
+</domain-models>

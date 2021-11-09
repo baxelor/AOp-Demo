@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/object-views
+  http://axelor.com/xml/ns/object-views/object-views_5.4.xsd">
+  
+  	<form  title="Add Contact" name="demo-contact-form" model="com.axelor.apps.demo.db.Contact" css="panel-#184D05">
+  		<panel title="Personal Details">
+  		<panel>
+  			<field name="image" showTitle="false"/>	
+  		</panel>
+  		
+  		<panel title="" colSpan="6">
+  			<field name="firstName"/>
+  			<field name="lastName"/>
+  		</panel>
+  		</panel>
+  	</form>
+  	
+  	<cards name="demo-contact-card" title="Contacts" model="com.axelor.apps.demo.db.Contact" orderBy="fullName">
+    <field name="fullName" />
+    <field name="hasImage" />
+    <template><![CDATA[
+      <div class="span4 card-image">
+        <img  ng-if="hasImage" ng-src="{{$image(null,'image')}}">
+        <img ng-if="!hasImage" src="img/user.png">
+        <strong>{{fullName}}</strong>
+      </div>
+    ]]></template>
+  </cards>
+  
+  </object-views>

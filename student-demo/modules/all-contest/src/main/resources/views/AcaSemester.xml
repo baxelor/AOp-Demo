@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<object-views xmlns="http://axelor.com/xml/ns/object-views" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://axelor.com/xml/ns/object-views
+  http://axelor.com/xml/ns/object-views/object-views_5.4.xsd">
+  
+  	
+  	<grid  title="All Semester" name="contest-add-sem-grid" model="com.axelor.apps.contest.db.AcaSemester">
+  		<field name="name" title="All Semester"/>
+  	</grid>
+  	
+  		<form  title="Add Semester" name="contest-add-sem-form" model="com.axelor.apps.contest.db.AcaSemester" css="panel-cyan">
+  			<panel title="Semesters">
+  			<field name="name"  title="Add Semester"/>
+  			</panel>
+  			
+  		</form>	
+  </object-views>

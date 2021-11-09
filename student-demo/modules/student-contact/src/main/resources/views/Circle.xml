@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/object-views
+  http://axelor.com/xml/ns/object-views/object-views_5.4.xsd">
+	
+		<grid  title="Circles" name="contact-circle-grid" model="com.axelor.apps.contact.db.Circle">
+			<field name="circle" title="Circle Name"/>
+		</grid>
+		
+		<form  title="Circles" name="contact-circle-form" model="com.axelor.apps.contact.db.Circle" css="panel-cyan">
+			<panel title="Circle">
+				<field name="circle" title="Add Circle"/>
+			</panel>
+		</form>
+  </object-views>

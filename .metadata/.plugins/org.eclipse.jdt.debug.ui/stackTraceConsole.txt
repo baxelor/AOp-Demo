@@ -1,0 +1,13 @@
+<form title="AllTaskForm" name="allTask-form" model="com.axelor.apps.project.db.ProjectTask">
+  		<panel title="Overview">
+  		<field name="name"/>
+		<field name="createDate"/>
+		<field name="startDate"/>
+		<field name="endDate"/>
+		<field name="user"/>
+		<field name="project"/>
+		<field name="priority"/>
+		<field name="state"/>
+		<field name="progress"/>
+  		</panel>
+  	</form>

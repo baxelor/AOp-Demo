@@ -1,0 +1,8 @@
+rootProject.name = 'student-demo'
+include "modules:student-contact"
+include "modules:student-project"
+include "modules:all-contest"
+include "modules:test-modules"
+
+
+

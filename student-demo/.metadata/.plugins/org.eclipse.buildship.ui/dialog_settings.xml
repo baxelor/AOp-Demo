@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.buildship.ui.wizard.project.import">
+		<item key="project_location" value="/home/axelor/Biplob/employee-demo-ws/student-demo"/>
+		<item key="gradle_user_home" value="/var/home/axelor/opt/gradle"/>
+		<item key="java_home" value="/var/home/axelor/opt/jdk-8"/>
+	</section>
+</section>

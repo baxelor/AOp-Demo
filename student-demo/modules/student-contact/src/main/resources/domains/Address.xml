@@ -1,0 +1,17 @@
+<domain-models xmlns="http://axelor.com/xml/ns/domain-models"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/domain-models
+  http://axelor.com/xml/ns/domain-models/domain-models_5.4.xsd">
+
+  <module name="contact" package="com.axelor.apps.contact.db"/>
+
+  <entity name="Address">
+    	<string name="street"/>
+    	<integer name="zip" title="ZIP Code"/>
+    	
+    	<many-to-one name="student" ref="com.axelor.apps.contact.db.Student" />
+    		<many-to-one  name="city" ref="com.axelor.apps.contact.db.City"/>
+    			<many-to-one  name="state" ref="com.axelor.apps.contact.db.State"/>
+    				<many-to-one  name="country" ref="com.axelor.apps.contact.db.Country"/>
+  </entity>
+</domain-models>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://axelor.com/xml/ns/object-views
+  http://axelor.com/xml/ns/object-views/object-views_5.4.xsd">
+  
+  		<selection name="selection-eduction-semester">
+  			<option value="1st">1st Semester</option>
+  			<option value="2nd">2nd Semester</option>
+  			<option value="3rd">3rd Semester</option>
+  			<option value="4th">4th Semester</option>
+  			<option value="5th">5th Semester</option>
+  			<option value="6th">6th Semester</option>
+  			<option value="7th">7th Semester</option>
+  			<option value="8th">8th Semester</option>
+  		</selection>
+  		
+  		<selection name="selection-education-degree">
+  			<option value="B.A">Bechalore Of Arts</option>
+  			<option value="B.Sc">Bechalore Of Science</option>
+  			<option value="B.tech">B.Tech/B.E</option>
+  		</selection>
+
+	<form model="com.axelor.apps.contest.db.EducationDetails" title="Academic Forms" name="contest-education-form">
+		<field name="semester"/>
+		<field name="institute" />
+		<field name="marks" />
+		<field name="degree"/>
+	</form>
+
+</object-views>

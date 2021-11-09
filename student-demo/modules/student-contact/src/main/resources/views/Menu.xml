@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://axelor.com/xml/ns/object-views
+  http://axelor.com/xml/ns/object-views/object-views_5.4.xsd">
+
+
+	<menuitem name="menu-contact-book" title="Contact Book" icon="fa fa-address-book"/> 
+
+  	<menuitem name="menu-contact-all" parent="menu-contact-book" title="All Contact" action="contact.all"/>   
+  <action-view name="contact.all"  title="Contacts" model="com.axelor.apps.contact.db.Student"> 
+    <view type="cards" name="contact-cards"/> 
+    <view type="form" name="contact-form"/> 
+    <context name="json-enhance" expr="true"/>
+  </action-view>
+  
+  	<menuitem name="menu-contact-student" parent="menu-contact-book" title="Student Contact" action="contact.student"/>   
+	  <action-view name="contact.student"  title="Students" model="com.axelor.apps.contact.db.Student"> 
+	    <view type="grid" name="contact-student"/> 
+	    <view type="form" name="contact-form"/> 
+	  </action-view>
+  
+  <menuitem name="menu-contact-faculty" parent="menu-contact-book" title="Feculty Contact" action="contact.faculty"/>   
+	  <action-view name="contact.faculty"  title="Faculties" model="com.axelor.apps.contact.db.FacultyContact"> 
+	    <view type="grid" name="contact-faculty-grid"/> 
+<!-- 	    <view type="form" name="contact-form"/>  -->
+	  </action-view>
+  
+  <menuitem name="menu-contact-configure" parent="menu-contact-book" title="Contact Configuration"/>
+  
+  	<menuitem name="menu-contact-configure-title" parent="menu-contact-configure" title="Title" action="contact.configure.title"/>   
+	  <action-view name="contact.configure.title"  title="Titles" model="com.axelor.apps.contact.db.Title">
+	  	<view type="grid" name="contact-configure-title"/>
+	  	<view type="form" name="contact-configure-title-form"/>
+	  </action-view>
+  	
+  	<menuitem name="menu-contact-configure-city" parent="menu-contact-configure" title="City" action="contact.configure.city"/>   
+	  <action-view name="contact.configure.city"  title="Cites" model="com.axelor.apps.contact.db.City">
+	  	<view type="grid" name="contact-configure-city"/>
+	  	<view type="form" name="contact-configure-city-form"/>
+	  </action-view>
+	  
+	  <menuitem name="menu-contact-configure-state" parent="menu-contact-configure" title="State" action="contact.configure.state"/>   
+	  <action-view name="contact.configure.state"  title="States" model="com.axelor.apps.contact.db.State">
+	  	<view type="grid" name="contact-configure-state"/>
+	  	<view type="form" name="contact-configure-state-form"/>
+	  </action-view>
+	  
+	  <menuitem name="menu-contact-configure-country" parent="menu-contact-configure" title="Country" action="contact.configure.country"/>   
+	  <action-view name="contact.configure.country"  title="Countries" model="com.axelor.apps.contact.db.Country">
+	  	<view type="grid" name="contact-configure-country"/>
+	  	<view type="form" name="contact-configure-country-form"/>
+	  </action-view>
+
+		<menuitem name="menu-contact-configure-circle" parent="menu-contact-configure" title="Circle" action="contact.configure.circle"/>   
+		  <action-view name="contact.configure.circle"  title="Circles" model="com.axelor.apps.contact.db.Circle">
+		  	<view type="grid" name="contact-circle-grid"/>
+		  	<view type="form" name="contact-circle-form"/>
+		  </action-view>
+		  
+		  <menuitem name="menu-contact-configure-department" parent="menu-contact-configure" title="Department" action="contact.configure.department"/>   
+		  <action-view name="contact.configure.department"  title="Departments" model="com.axelor.apps.contact.db.Departments">
+		  	<view type="grid" name="contact-department-grid"/>
+		  	<view type="form" name="contact-department-form"/>
+		  </action-view>
+</object-views>

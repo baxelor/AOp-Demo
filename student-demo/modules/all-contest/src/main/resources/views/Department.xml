@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<object-views xmlns="http://axelor.com/xml/ns/object-views" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://axelor.com/xml/ns/object-views
+  http://axelor.com/xml/ns/object-views/object-views_5.4.xsd">
+  
+  		<grid  title="Departments" name="contest-department-grid" model="com.axelor.apps.contest.db.Department">
+  			<field name="name" title="All Department"/>
+  			<field name="code" title="Department code"/>
+  		</grid>
+  	
+  		<form  title="Add Department" name="contest-department-form" model="com.axelor.apps.contest.db.Department" css="panel-cyan">
+  			<panel title="Add Department">
+  				<field name="name" title="Add Department"/>	
+  				<field name="code" title="Department code"/>
+  			</panel>
+  		</form>
+    </object-views>

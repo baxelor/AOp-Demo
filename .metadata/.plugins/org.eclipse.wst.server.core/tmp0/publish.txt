@@ -1,0 +1,8 @@
+#Tomcat publish data
+#Tue Nov 09 18:49:20 IST 2021
+org.eclipse.jst.j2ee.server\:student-project=WEB-INF/lib/student-project.jar
+org.eclipse.jst.j2ee.server\:/binary\:/var/home/axelor/.gradle/caches/modules-2/files-2.1/com.axelor/axelor-el/8.5.54/bd225ba197535f4c188d109595967bb51ed28fa/axelor-el-8.5.54.jar=WEB-INF/lib/axelor-el-8.5.54.jar
+org.eclipse.jst.j2ee.server\:test-modules=WEB-INF/lib/test-modules.jar
+org.eclipse.jst.j2ee.server\:/binary\:/var/home/axelor/.gradle/caches/modules-2/files-2.1/org.apache.tomcat.embed/tomcat-embed-jasper/8.5.54/973752fefe5ba7886bde7dd66300b72a89549c68/tomcat-embed-jasper-8.5.54.jar=WEB-INF/lib/tomcat-embed-jasper-8.5.54.jar
+org.eclipse.jst.j2ee.server\:all-contest=WEB-INF/lib/all-contest.jar
+org.eclipse.jst.j2ee.server\:student-contact=WEB-INF/lib/student-contact.jar

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/object-views
+  http://axelor.com/xml/ns/object-views/object-views_5.4.xsd">
+	  
+			<grid  title="Students" name="contact-student" model="com.axelor.apps.contact.db.Student">
+				<field name="fullName"/>
+				<field name="phone"/>
+				<field name="email"/>
+				<field name="dateOfBirth"/>
+			</grid>	
+								
+			<selection name="contact-phone-type-selection">
+				<option value="home">Home</option>
+				<option value="office">Office</option>
+				<option value="other">Others</option>
+			</selection>
+			
+			
+	<cards name="contact-cards" title="Contacts" model="com.axelor.apps.contact.db.Student" orderBy="fullName">
+    <field name="fullName"/>
+    <field name="phone"/>
+    <field name="email"/>
+    <field name="hasImage" />
+    <template><![CDATA[
+      <div class="span4 card-image">
+	    <img ng-if="hasImage" ng-src="{{$image(null, 'image')}}">
+	    <img ng-if="!hasImage" src="img/user.png">
+	    <strong>{{fullName}}</strong>
+  		</div>
+      <div class="span8">
+        <address>
+          <strong>{{address.street}}</strong><br>
+          {{address.city.name}}<span ng-if="address.zip"> - {{address.zip}}</span><br>
+          <span ng-if="address.state.name"> {{address.state.name}},</span>
+          {{address.country.name}}<br>
+          <abbr ng-if="phone" title="Phone"><strong>Phone:</abbr></strong> {{phone}}<br>
+          <abbr ng-if="email" title="Email"><strong>Email:</abbr></strong> {{email}}<br>
+        </address>
+      </div>
+    ]]></template>
+  </cards>
+  
+  <form  title="Contact" name="contact-form" model="com.axelor.apps.contact.db.Student" css="panel-blue" >
+  
+  	<toolbar>
+  		<button onClick="reports-contact" name="print-btn" title="Print" icon="fa-print"/>
+  	</toolbar>
+  
+  	<panel title="Personal">
+  		<panel colSpan="4">
+  			<field name="image" colSpan="12" showTitle="false"/>
+  		</panel>
+  			<panel colSpan="8">
+	  			<field name="fullName" title="Name" colSpan="12" readonly="false">
+	  				<editor x-show-titles="false">
+	  					<field name="title" widget="SuggestBox" colSpan="2"/>
+	  					<field name="firstName" colSpan="5" required="true"/>
+	  					<field name="lastName" colSpan="5" required="true"/>
+	  				</editor>
+	  			</field>
+	  				<field name="dateOfBirth"/>
+  			</panel>
+  </panel>
+	  <panel title="Contacts">
+	  <field name="emails">
+	  	<editor x-show-titles="false" layout="table">
+	  		<field name="emailAddress" colSpan="10"/>
+	  	</editor>
+	  </field>
+	  	<field name="phones">
+	  		<editor x-show-titles="false">
+	  			<field name="type" selection="contact-phone-type-selection" colSpan="3"/>
+	  			<field name="phone" colSpan="8" widget="phone"/>
+	  		</editor>
+	  	</field>
+	  </panel>  
+	  <panel-related field="address" editable="true">
+	  	<field name="street" required="true"/>
+	  			<field name="zip" required="true"/>
+	  			<field name="city" widget="SuggestBox" canNew="true"/>
+	  			<field name="state" widget="SuggestBox" required="true"/>
+	  			<field name="country" widget="SuggestBox" required="true"/>
+	  </panel-related>
+	  <panel sidebar="true">
+	  	<field name="createdOn"/>
+	  	<field name="updatedOn"/>
+	  </panel>
+	  
+	  <panel  title="Extras">
+	  	<field name="circles" widget="suggestBox"/>
+	  	<field name="departments" canNew="true" />
+	  </panel>
+  </form>
+  
+	<action-report output="Contact" name="reports-contact" design="contact_report.rptdesign">
+		<param name="contactId" expr="eval:id"/>
+	</action-report>
+  
+	
+</object-views>

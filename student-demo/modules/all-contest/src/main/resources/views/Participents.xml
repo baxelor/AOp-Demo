@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<object-views xmlns="http://axelor.com/xml/ns/object-views" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://axelor.com/xml/ns/object-views
+  http://axelor.com/xml/ns/object-views/object-views_5.4.xsd">
+  	
+  	<grid  title="Participate" name="contest-perticipent-grid" model="com.axelor.apps.contest.db.Participents">
+ 			<field name="fullName"/>
+ 			<field name="collage"/>	 	
+ 			<field name="email"/>
+ 			<field name="departments"/>
+ 			<field name="contest" title="Participated"/>
+  	</grid> 	
+  	
+  	<selection name="selection-phone-type">
+  		<option value="primary">Primary</option>
+  		<option value="others">Others</option>
+  	</selection>
+  	
+  	
+  	
+  	<form  title="Participate" name="contest-participate-form" model="com.axelor.apps.contest.db.Participents" css="panel-blue">
+  		<toolbar>
+  			<button onClick="report-participants" name="print-btn" title="Print"/>
+  		</toolbar>
+  		
+  		
+  		<panel title="Personal" >
+  			<field name="fullName" readonly="false" colSpan="10">
+  				<editor x-show-titles="false">
+  					<field name="firstName"/>
+  					<field name="lastName"/>
+  				</editor>
+  			</field>
+  			<field name="dateOfBirth" colSpan="4"/>
+  		</panel>
+  		
+  		<panel title="Contact">
+  			<field name="emails">
+  				<editor x-show-titles="false">
+  					<field name="email" colSpan="10" widget="email"/>
+  				</editor>
+  			</field>
+  			<field name="phones">
+  				<editor x-show-titles="false">
+  					<field name="type" colSpan="3" selection="selection-phone-type" onSelect="upadte-validate"/>
+  					<field name="phone" colSpan="8" widget="phone"/>
+  				</editor>
+  			</field>
+  		</panel>
+  		
+  			<panel title="Contest">
+  				<field name="departments" widget="suggestBox" title="Select Department"  />
+  				<field name="semesters" title="Select Semester" widget="suggestBox"/>
+  				<field name="contest" widget="suggestBox" title="Select Contest" onSelect="domain-action"/>
+  			</panel>			
+  		
+  	</form>
+  	
+  	<action-group name="domain-action-group">
+  		<action name="domain-action"/>
+  		<action name="domain-action-sem"/>
+  	</action-group>
+  	
+  	
+  	<action-attrs name="domain-action">
+  		<attribute name="domain" for="contest" expr=":departments member of self.departments" />
+<!--   		<attribute name="domain" for="contest" expr=":semesters member of self.semesters"/> -->
+  	</action-attrs>
+  	
+  	<action-report output="demo" name="report-participants" design="participant_report.rptdesign">
+  		<param name="participentId" expr="eval:id"/>
+  	</action-report>
+  	
+  	
+  </object-views>

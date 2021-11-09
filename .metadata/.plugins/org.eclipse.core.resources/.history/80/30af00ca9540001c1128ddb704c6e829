@@ -1,0 +1,11 @@
+package com.axelor.apps.data.test;
+
+import java.util.Map;
+
+public class testMethod {
+	
+	public void getdate(Map<String, Object> context) {
+		
+	}
+
+}

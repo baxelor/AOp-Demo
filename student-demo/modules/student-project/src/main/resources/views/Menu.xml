@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/object-views
+  http://axelor.com/xml/ns/object-views/object-views_5.4.xsd">
+
+ 	<menuitem name="menu-project" title="Project" />
+	
+	<menuitem name="menu-project-all" parent="menu-project" title="All Project" action="project.all" />
+	<action-view name="project.all" title="Projects" model="com.axelor.apps.project.db.Project">
+		<view type="grid" name="project-grid" />
+		<view type="form" name="project-form" />
+	</action-view>
+	
+	 <menuitem name="menu-project-alltasks" parent="menu-project"
+    title="All Tasks"
+    action="project.task.all"/>
+	<action-view name="project.task.all" title="All Tasks" model="com.axelor.apps.project.db.ProjectTask">
+    <view type="kanban" name="project-task-kanban"/>
+    <view type="form" name="allTask-form"/>
+  </action-view>
+	
+	<menuitem name="menu-project-mytask" parent="menu-project" title="My Task" action="project.my.task" />
+	<action-view name="project.my.task" title="My Tasks" model="com.axelor.apps.project.db.ProjectTask">
+		<view type="grid" name="allTask-grid"/>
+		<view type="form" name="allTask-form"/>
+	</action-view>
+	
+	<menuitem name="menu-project-tasktree" parent="menu-project" title="Tree Task" action="project.tree.task" />
+	<action-view name="project.tree.task" title="Tree Task" model="com.axelor.apps.project.db.ProjectTask">
+		<view type="tree" name="allTask-tree"/>
+		<view type="form" name="allTask-form"/>
+	</action-view>
+
+</object-views>

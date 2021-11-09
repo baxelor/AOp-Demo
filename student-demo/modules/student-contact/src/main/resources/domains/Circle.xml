@@ -1,0 +1,11 @@
+<domain-models xmlns="http://axelor.com/xml/ns/domain-models"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/domain-models
+  http://axelor.com/xml/ns/domain-models/domain-models_5.4.xsd">
+
+  <module name="contact" package="com.axelor.apps.contact.db"/>
+
+  <entity name="Circle">
+    	<string name="circle"/>    				
+  </entity>
+</domain-models>

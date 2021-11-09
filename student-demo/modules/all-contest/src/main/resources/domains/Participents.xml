@@ -1,0 +1,37 @@
+<domain-models xmlns="http://axelor.com/xml/ns/domain-models"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://axelor.com/xml/ns/domain-models
+  http://axelor.com/xml/ns/domain-models/domain-models_5.4.xsd">
+
+  <module name="contest" package="com.axelor.apps.contest.db"/>
+
+  <entity name="Participents">
+  	<string name="firstName"/>
+  	<string name="lastName"/>
+  	<date name="dateOfBirth"/>
+  	<string name="fullName" search="firstName,lastName" namecolumn="true">
+  		<![CDATA[
+  			if(firstName==null && lastName==null)
+  				return null;
+  			return firstName + " " + lastName;		
+  		]]>
+  	</string>
+  	
+  	<string name="email">
+  	<![CDATA[
+  			 if (emails == null || emails.isEmpty()) return null;
+		    for (EmailAddress email : emails) if (email.getPrimary() == Boolean.TRUE) return email.getEmail();
+		    return emails.get(0).getEmail();
+  		]]>
+  	</string>
+  	
+  			
+  					<one-to-many  name="phones" ref="com.axelor.apps.contest.db.PhoneNo"/>
+  						<one-to-many  name="emails" ref="com.axelor.apps.contest.db.EmailAddress" />
+  								<many-to-one  name="departments" ref="com.axelor.apps.contest.db.Department"/>
+  									<many-to-one  name="eduDetails" ref="com.axelor.apps.contest.db.EducationDetails"/>
+  										<many-to-one  name="contest" ref="com.axelor.apps.contest.db.Contest"/>
+  											<many-to-one  name="demo" ref="com.axelor.apps.contest.db.Demo"/>
+  												<many-to-one  name="semesters" ref="com.axelor.apps.contest.db.AcaSemester"/>
+  </entity>
+</domain-models>
